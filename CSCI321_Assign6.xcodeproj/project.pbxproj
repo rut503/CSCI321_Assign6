@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		DF654576256B199A00F09939 /* BookData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF654575256B199A00F09939 /* BookData.swift */; };
 		DF65457C256B59D100F09939 /* BookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF65457B256B59D100F09939 /* BookCell.swift */; };
+		DF7515D9256C4BD300AEC8A0 /* Book+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7515D7256C4BD300AEC8A0 /* Book+CoreDataClass.swift */; };
+		DF7515DA256C4BD300AEC8A0 /* Book+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7515D8256C4BD300AEC8A0 /* Book+CoreDataProperties.swift */; };
 		DF8F7816256863D600695823 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8F7815256863D600695823 /* AppDelegate.swift */; };
 		DF8F7819256863D600695823 /* CSCI321_Assign6.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DF8F7817256863D600695823 /* CSCI321_Assign6.xcdatamodeld */; };
 		DF8F781B256863D600695823 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8F781A256863D600695823 /* SceneDelegate.swift */; };
@@ -17,8 +19,6 @@
 		DF8F7822256863D600695823 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF8F7820256863D600695823 /* Main.storyboard */; };
 		DF8F7824256863D700695823 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF8F7823256863D700695823 /* Assets.xcassets */; };
 		DF8F7827256863D700695823 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF8F7825256863D700695823 /* LaunchScreen.storyboard */; };
-		DF97C16E256A1AE600017CFA /* Book+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF97C16C256A1AE600017CFA /* Book+CoreDataClass.swift */; };
-		DF97C16F256A1AE600017CFA /* Book+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF97C16D256A1AE600017CFA /* Book+CoreDataProperties.swift */; };
 		DF97C173256A368300017CFA /* AddABookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF97C172256A368300017CFA /* AddABookViewController.swift */; };
 		DFDA58912569BB3200332F6B /* books.plist in Resources */ = {isa = PBXBuildFile; fileRef = DFDA58902569BB3200332F6B /* books.plist */; };
 /* End PBXBuildFile section */
@@ -26,6 +26,8 @@
 /* Begin PBXFileReference section */
 		DF654575256B199A00F09939 /* BookData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookData.swift; sourceTree = "<group>"; };
 		DF65457B256B59D100F09939 /* BookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCell.swift; sourceTree = "<group>"; };
+		DF7515D7256C4BD300AEC8A0 /* Book+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Book+CoreDataClass.swift"; sourceTree = "<group>"; };
+		DF7515D8256C4BD300AEC8A0 /* Book+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Book+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		DF8F7812256863D600695823 /* CSCI321_Assign6.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CSCI321_Assign6.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF8F7815256863D600695823 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DF8F7818256863D600695823 /* CSCI321_Assign6.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CSCI321_Assign6.xcdatamodel; sourceTree = "<group>"; };
@@ -36,8 +38,6 @@
 		DF8F7823256863D700695823 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DF8F7826256863D700695823 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DF8F7828256863D700695823 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DF97C16C256A1AE600017CFA /* Book+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Book+CoreDataClass.swift"; sourceTree = "<group>"; };
-		DF97C16D256A1AE600017CFA /* Book+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Book+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		DF97C172256A368300017CFA /* AddABookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddABookViewController.swift; sourceTree = "<group>"; };
 		DFDA58902569BB3200332F6B /* books.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = books.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -85,8 +85,8 @@
 				DFDA58902569BB3200332F6B /* books.plist */,
 				DF8F7823256863D700695823 /* Assets.xcassets */,
 				DF8F7817256863D600695823 /* CSCI321_Assign6.xcdatamodeld */,
-				DF97C16C256A1AE600017CFA /* Book+CoreDataClass.swift */,
-				DF97C16D256A1AE600017CFA /* Book+CoreDataProperties.swift */,
+				DF7515D7256C4BD300AEC8A0 /* Book+CoreDataClass.swift */,
+				DF7515D8256C4BD300AEC8A0 /* Book+CoreDataProperties.swift */,
 			);
 			path = CSCI321_Assign6;
 			sourceTree = "<group>";
@@ -164,14 +164,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF8F781D256863D600695823 /* MasterViewController.swift in Sources */,
+				DF7515D9256C4BD300AEC8A0 /* Book+CoreDataClass.swift in Sources */,
 				DF8F7819256863D600695823 /* CSCI321_Assign6.xcdatamodeld in Sources */,
 				DF65457C256B59D100F09939 /* BookCell.swift in Sources */,
 				DF8F781F256863D600695823 /* DetailViewController.swift in Sources */,
 				DF97C173256A368300017CFA /* AddABookViewController.swift in Sources */,
 				DF8F7816256863D600695823 /* AppDelegate.swift in Sources */,
 				DF654576256B199A00F09939 /* BookData.swift in Sources */,
-				DF97C16E256A1AE600017CFA /* Book+CoreDataClass.swift in Sources */,
-				DF97C16F256A1AE600017CFA /* Book+CoreDataProperties.swift in Sources */,
+				DF7515DA256C4BD300AEC8A0 /* Book+CoreDataProperties.swift in Sources */,
 				DF8F781B256863D600695823 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

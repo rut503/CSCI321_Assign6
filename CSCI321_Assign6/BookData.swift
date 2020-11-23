@@ -2,12 +2,16 @@
 //  BookData.swift
 //  CSCI321_Assign6
 //
-//  Created by Rutvik Patel on 11/22/20.
-//  Copyright © 2020 Rut Codes. All rights reserved.
+//  Created by Rutvik Patel (Z1865128).
+//  Created by Aviraj Parmar (Z1861160).
 //
 
 import Foundation
 
+/*
+ This structure is used to map out the data about the book from the plist file and
+ decode that data to add it to the database.
+ */
 struct BookData: Decodable {
     let title: String
     let author: String

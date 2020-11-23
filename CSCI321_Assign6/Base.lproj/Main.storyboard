@@ -143,8 +143,8 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title of the Book" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ESG-P7-fij">
-                                            <rect key="frame" x="84" y="11" width="244" height="26"/>
-                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                            <rect key="frame" x="84" y="11" width="244" height="23.5"/>
+                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
                                             <color key="textColor" red="1" green="0.066102493795305306" blue="0.48377326510771557" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                             <size key="shadowOffset" width="0.0" height="0.0"/>
@@ -166,8 +166,8 @@
                                     </subviews>
                                     <color key="backgroundColor" red="0.098905794320000004" green="0.097804091869999998" blue="0.1512394547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
-                                        <constraint firstItem="grv-5U-MNV" firstAttribute="top" secondItem="ESG-P7-fij" secondAttribute="bottom" constant="17.5" id="7Kc-SG-nnk"/>
                                         <constraint firstItem="ESG-P7-fij" firstAttribute="leading" secondItem="arA-Fp-bx6" secondAttribute="trailing" constant="8" id="Gg4-UQ-Npt"/>
+                                        <constraint firstItem="grv-5U-MNV" firstAttribute="top" secondItem="ESG-P7-fij" secondAttribute="bottom" constant="20" id="O2o-sT-K34"/>
                                         <constraint firstItem="arA-Fp-bx6" firstAttribute="centerY" secondItem="37f-cq-3Eg" secondAttribute="centerY" id="WNZ-ZF-BiE"/>
                                         <constraint firstItem="ESG-P7-fij" firstAttribute="trailing" secondItem="37f-cq-3Eg" secondAttribute="trailingMargin" id="ajG-QQ-df2"/>
                                         <constraint firstItem="grv-5U-MNV" firstAttribute="bottom" secondItem="37f-cq-3Eg" secondAttribute="bottomMargin" id="gac-Wn-19k"/>
@@ -223,7 +223,7 @@
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What is the name of the book?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IrS-sq-fK2">
                                                     <rect key="frame" x="16" y="4" width="343" height="36"/>
-                                                    <color key="textColor" red="1" green="0.82859501946831271" blue="0.075879627900158342" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="textColor" red="0.98831683400000003" green="0.88521194459999997" blue="0.1672124565" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                     <userDefinedRuntimeAttributes>
@@ -261,7 +261,7 @@
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Who wrote the book?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xmo-Yp-hOv">
                                                     <rect key="frame" x="16" y="4" width="343" height="36"/>
-                                                    <color key="textColor" red="1" green="0.83683747149999999" blue="0.08229847656" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="textColor" red="0.98816579579999997" green="0.88175225260000001" blue="0.1686632633" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                     <userDefinedRuntimeAttributes>
@@ -299,7 +299,7 @@
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What year was the book released?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wUB-L7-ZN5">
                                                     <rect key="frame" x="16" y="4" width="343" height="36"/>
-                                                    <color key="textColor" red="1" green="0.83683747149999999" blue="0.08229847656" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="textColor" red="0.98848313089999995" green="0.8886654973" blue="0.17462676760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                     <userDefinedRuntimeAttributes>
@@ -338,7 +338,7 @@
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What's the book rating from 0 to 5?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IOm-3K-XAa">
                                                     <rect key="frame" x="16" y="4" width="343" height="36"/>
-                                                    <color key="textColor" red="1" green="0.83683747149999999" blue="0.08229847656" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="textColor" red="0.98848313089999995" green="0.8886654973" blue="0.17462676760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                                     <userDefinedRuntimeAttributes>
@@ -376,7 +376,7 @@
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What's the ISBN of the book?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cbo-J8-sBQ">
                                                     <rect key="frame" x="16" y="4" width="343" height="36"/>
-                                                    <color key="textColor" red="1" green="0.83683747149999999" blue="0.08229847656" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="textColor" red="0.98848313089999995" green="0.8886654973" blue="0.17462676760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                     <userDefinedRuntimeAttributes>

@@ -2,8 +2,8 @@
 //  MasterViewController.swift
 //  CSCI321_Assign6
 //
-//  Created by Rutvik Patel on 11/20/20.
-//  Copyright © 2020 Rut Codes. All rights reserved.
+//  Created by Rutvik Patel (Z1865128).
+//  Created by Aviraj Parmar (Z1861160).
 //
 
 // For EC:
@@ -15,7 +15,9 @@ import CoreData
 
 class MasterViewController: UITableViewController, NSFetchedResultsControllerDelegate {
 
+    // referance to the detail view controller
     var detailViewController: DetailViewController? = nil
+    // referance to the core data database
     var managedObjectContext: NSManagedObjectContext? = nil
 
     override func viewDidLoad() {
@@ -29,28 +31,37 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
             detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
         }
         
-        // Insert data into the database from the plist file and load into table view
+        // Inserting data into the database from the plist file and load into table view
         insertDataIntoDatabaseFromFile()
     }
     
+    /*
+     This function will first check if the data from plist file needs to be added into
+     the database for initial run of the app. Then it will add the data from the plist
+     file into the database.
+     */
     func insertDataIntoDatabaseFromFile() {
         // checking if books.plist data is already in Core Data
         let fetch = NSFetchRequest<Book>(entityName: "Book")
         let count = try! managedObjectContext!.count(for: fetch)
-        
         if count > 0 {
             return // books.plist data is already in the Core Data
         }
         
+        // if data needs to be loaded into the database then get the url to the plist file
+        //  and data from that url
         guard let url = Bundle.main.url(forResource: "books", withExtension: ".plist"), let data: Data = try? Data(contentsOf: url) else {
             print("Unable to read property list")
             return
         }
         
+        // if we have data from the plist file, add all that data to the database
         do {
-            let decoder = PropertyListDecoder()
+            let decoder = PropertyListDecoder()  // decoding plist file
+            // tranfering data into an array
             let array = try decoder.decode([BookData].self, from: data)
             
+            // for each item in the array full of book data add it to the core data database
             for b in array {
                 let entity = NSEntityDescription.entity(forEntityName: "Book", in: managedObjectContext!)!
                 let newBook = Book(entity: entity, insertInto: managedObjectContext)
@@ -68,7 +79,6 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
                 // Save the context.
                 try managedObjectContext!.save()
             }
-
         } catch {
             print("Unable to save book data to database: \(error.localizedDescription)")
         }
@@ -94,26 +104,42 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         }
     }
     
+    /*
+     This funtion handles the situation where user cancels the action of adding a new
+     book to the database.
+     */
     @IBAction func unwindToCancel(_ segue: UIStoryboardSegue){
         
     }
     
+    /*
+     This function handles the situation where user saves the new book to the database.
+     It will get the book data from the AddABookViewController and then add that data
+     into the database including binary data of a book cover image.
+     */
     @IBAction func unwindToSave(_ segue: UIStoryboardSegue){
         if let addABookViewController = segue.source as? AddABookViewController {
             if let addBook = addABookViewController.bookData {
-                
+                // creating book context pointer
                 let context = self.fetchedResultsController.managedObjectContext
                 let newBook = Book(context: context)
                 
+                // adding basic book info from AddABookViewController to the newBook
                 newBook.title = addBook.title
                 newBook.author = addBook.author
                 newBook.releaseYear = addBook.releaseYear
                 newBook.rating = addBook.rating
                 newBook.isbn = addBook.isbn
                 
+                // if an image data was passed to the AddABookViewController then add that
+                //  data to the coverImage attribute in the Book entity database.
                 if let coverImageData = addABookViewController.coverImageData {
                     newBook.coverImage = NSData(data: coverImageData) as Data
-                } else {
+                }
+                // if image data was NOT passed to the AddABookViewController then add a
+                //  default book cover image which is the logo of the app to the coverImage
+                //  attribute in the Book entity database.
+                else {
                     let image = UIImage(named: "DefaultBookCover")
                     let coverImageData = image!.jpegData(compressionQuality: 1.0)!
                     newBook.coverImage = NSData(data: coverImageData) as Data
@@ -126,7 +152,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
                     print("Unable to save new book: \(error), \(error.userInfo)")
                 }
                 
-                self.tableView.reloadData()
+                self.tableView.reloadData() // reload table view (displayed book list)
             }
         }
     }
@@ -143,27 +169,28 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        // referance to a cutome made cell BookCell
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! BookCell
         
+        // get book data from database at given index
         let book = fetchedResultsController.object(at: indexPath)
         
-        // setting background color of each cell
+        // setting background color of each cell to dark purple color for dark mode theme
         let colorView = UIView()
         colorView.backgroundColor = UIColor(red: CGFloat(25.0/255.0), green: CGFloat(25.0/255.0), blue: CGFloat(39.0/255.0), alpha: CGFloat(1.0))
         cell.backgroundView = colorView
-        // setting ___ under each cell
-        
 
-        cell.coverImageView.image = UIImage(data: book.coverImage!)
-        cell.titleLabel!.text = book.title
-        cell.authorLabel!.text = "- " + book.author!
+        // setting cell fields to book data from database for each cell
+        cell.coverImageView.image = UIImage(data: book.coverImage!) // book cover image
+        cell.titleLabel!.text = book.title                          // title of the book
+        cell.authorLabel!.text = "- " + book.author!                // author of the book
 
         return cell
     }
 
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+        return true   // allow user to delete a book from the database
     }
 
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
@@ -232,38 +259,14 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
                 tableView.insertRows(at: [newIndexPath!], with: .fade)
             case .delete:
                 tableView.deleteRows(at: [indexPath!], with: .fade)
-            case .update:
-                configureCell(tableView.cellForRow(at: indexPath!)!, withEvent: anObject as! Book)
-            case .move:
-                configureCell(tableView.cellForRow(at: indexPath!)!, withEvent: anObject as! Book)
-                tableView.moveRow(at: indexPath!, to: newIndexPath!)
             default:
                 return
         }
-    }
-    
-    func configureCell(_ cell: UITableViewCell, withEvent book: Book) {
-//        cell.coverImageView.image = UIImage(data: book.coverImage!)
-//        cell.titleLabel!.text = book.title
-//        cell.authorLabel!.text = "- " + book.author!
-        
-//        cell.textLabel!.text = book.title
-//        cell.detailTextLabel!.text = "- " + book.author!
-//        cell.imageView!.image = UIImage(data: book.coverImage!)
     }
 
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         tableView.endUpdates()
     }
-
-    /*
-     // Implementing the above methods to update the table view in response to individual changes may have performance implications if a large number of changes are made simultaneously. If this proves to be an issue, you can instead just implement controllerDidChangeContent: which notifies the delegate that all section and object changes have been processed.
-     
-     func controllerDidChangeContent(controller: NSFetchedResultsController) {
-         // In the simplest, most efficient, case, reload the table view.
-         tableView.reloadData()
-     }
-     */
-
+    
 }
 

@@ -114,5 +114,75 @@
         <key>Author Name</key>
         <string>J. K. Rowling</string>
     </dict>
+    <dict>
+        <key>Book Title</key>
+        <string>A Game of Thrones (A Song of Ice and Fire, Book 1)</string>
+        <key>Release Year</key>
+        <integer>1996</integer>
+        <key>Rating</key>
+        <real>4.4</real>
+        <key>ISBN</key>
+        <integer>9783442267743</integer>
+        <key>Cover Image Name</key>
+        <string>AGameOfThrones.jpg</string>
+        <key>Author Name</key>
+        <string>George R. R. Martin</string>
+    </dict>
+    <dict>
+        <key>Book Title</key>
+        <string>A Clash of Kings (A Song of Ice and Fire, Book 2)</string>
+        <key>Release Year</key>
+        <integer>1998</integer>
+        <key>Rating</key>
+        <real>4.4</real>
+        <key>ISBN</key>
+        <integer>9780307951199</integer>
+        <key>Cover Image Name</key>
+        <string>AClashOfKings.jpg</string>
+        <key>Author Name</key>
+        <string>George R. R. Martin</string>
+    </dict>
+    <dict>
+        <key>Book Title</key>
+        <string>A Storm of Swords (A Song of Ice and Fire, Book 3)</string>
+        <key>Release Year</key>
+        <integer>2000</integer>
+        <key>Rating</key>
+        <real>4.5</real>
+        <key>ISBN</key>
+        <integer>9783442268474</integer>
+        <key>Cover Image Name</key>
+        <string>AStormOfSwords.jpg</string>
+        <key>Author Name</key>
+        <string>George R. R. Martin</string>
+    </dict>
+    <dict>
+        <key>Book Title</key>
+        <string>A Feast for Crows (A Song of Ice and Fire, Book 4)</string>
+        <key>Release Year</key>
+        <integer>2005</integer>
+        <key>Rating</key>
+        <real>4.1</real>
+        <key>ISBN</key>
+        <integer>9780307951212</integer>
+        <key>Cover Image Name</key>
+        <string>AFeastForCrows.jpg</string>
+        <key>Author Name</key>
+        <string>George R. R. Martin</string>
+    </dict>
+    <dict>
+        <key>Book Title</key>
+        <string>A Dance with Dragons (A Song of Ice and Fire, Book 5)</string>
+        <key>Release Year</key>
+        <integer>2011</integer>
+        <key>Rating</key>
+        <real>4.3</real>
+        <key>ISBN</key>
+        <integer>9780307951229</integer>
+        <key>Cover Image Name</key>
+        <string>ADanceWithDragons.jpg</string>
+        <key>Author Name</key>
+        <string>George R. R. Martin</string>
+    </dict>
 </array>
 </plist>

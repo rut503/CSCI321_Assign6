@@ -11,9 +11,14 @@
         <scene sceneID="pY4-Hu-kfo">
             <objects>
                 <navigationController title="Master" id="RMx-3f-FxP" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Pmd-2v-anx">
+                    <navigationBar key="navigationBar" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" barStyle="black" translucent="NO" id="Pmd-2v-anx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.098905794320000004" green="0.097804091869999998" blue="0.1512394547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.098905794320000004" green="0.097804091869999998" blue="0.1512394547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.66570854189999995" green="0.89085364339999995" blue="0.12421221289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="7bK-jq-Zjz" kind="relationship" relationship="rootViewController" id="tsl-Nk-0bq"/>
@@ -28,46 +33,46 @@
             <objects>
                 <viewController title="Detail" id="JEX-9P-axG" customClass="DetailViewController" customModule="CSCI321_Assign6" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="svH-Pt-448">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="fNi-eX-Kqr">
-                                <rect key="frame" x="8" y="53" width="359" height="329.5"/>
+                                <rect key="frame" x="8" y="9" width="359" height="307.5"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title of the Book" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EVb-xf-pH5">
-                                <rect key="frame" x="8" y="400" width="359" height="26"/>
+                                <rect key="frame" x="8" y="334" width="359" height="26"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="1" green="0.065742342690082833" blue="0.50451006906386331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Author Name" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iM0-8J-EUF">
-                                <rect key="frame" x="8" y="434" width="359" height="22.5"/>
+                                <rect key="frame" x="8" y="368" width="359" height="22.5"/>
                                 <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.23428924746013191" green="0.82995438567027668" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating : 0.0/5.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MLI-lh-6Bh">
-                                <rect key="frame" x="8" y="488.5" width="359" height="21"/>
+                                <rect key="frame" x="8" y="422.5" width="359" height="21"/>
                                 <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="18"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="1" green="0.83683747151353549" blue="0.082298476561838196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ISBN : 0000000000000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cEA-0i-xpi">
-                                <rect key="frame" x="8" y="562.5" width="359" height="21"/>
+                                <rect key="frame" x="8" y="496.5" width="359" height="21"/>
                                 <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="18"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="1" green="0.83683747151353549" blue="0.082298476561838196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Release Year : 0000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YiT-Yg-D4P">
-                                <rect key="frame" x="8" y="525.5" width="359" height="21"/>
+                                <rect key="frame" x="8" y="459.5" width="359" height="21"/>
                                 <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="18"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="1" green="0.83683747151353549" blue="0.082298476561838196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.098905794320000004" green="0.097804091869999998" blue="0.1512394547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="fNi-eX-Kqr" firstAttribute="height" secondItem="svH-Pt-448" secondAttribute="height" multiplier="0.497751" id="6YF-0A-fOD"/>
                             <constraint firstItem="fNi-eX-Kqr" firstAttribute="top" secondItem="VUw-jc-0yf" secondAttribute="top" constant="8" id="6YP-cR-EX4"/>
@@ -92,7 +97,7 @@
                         <viewLayoutGuide key="safeArea" id="VUw-jc-0yf"/>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Detail" id="mOI-FS-AaM"/>
+                    <navigationItem key="navigationItem" title="Book Detail" id="mOI-FS-AaM"/>
                     <connections>
                         <outlet property="authorLabel" destination="iM0-8J-EUF" id="eH1-JY-yFw"/>
                         <outlet property="coverImageView" destination="fNi-eX-Kqr" id="mvy-nY-xfy"/>
@@ -124,40 +129,58 @@
         <scene sceneID="smW-Zh-WAh">
             <objects>
                 <tableViewController title="Master" clearsSelectionOnViewWillAppear="NO" id="7bK-jq-Zjz" customClass="MasterViewController" customModule="CSCI321_Assign6" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="r7i-6Z-zg0">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="black" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="r7i-6Z-zg0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.098905794320000004" green="0.097804091869999998" blue="0.1512394547" alpha="0.95248287671232879" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="separatorColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="Arm-wq-HPj" detailTextLabel="0IW-ka-fl5" imageView="7YR-2S-zhQ" style="IBUITableViewCellStyleSubtitle" id="WCw-Qf-5nD">
-                                <rect key="frame" x="0.0" y="28" width="375" height="55.5"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="88" id="WCw-Qf-5nD" customClass="BookCell" customModule="CSCI321_Assign6" customModuleProvider="target">
+                                <rect key="frame" x="16" y="55.5" width="343" height="88"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WCw-Qf-5nD" id="37f-cq-3Eg">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="55.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="343" height="88"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Arm-wq-HPj">
-                                            <rect key="frame" x="55" y="10" width="33.5" height="20.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title of the Book" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ESG-P7-fij">
+                                            <rect key="frame" x="84" y="11" width="244" height="23.5"/>
+                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
+                                            <color key="textColor" red="1" green="0.066102493795305306" blue="0.48377326510771557" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                            <size key="shadowOffset" width="0.0" height="0.0"/>
                                         </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0IW-ka-fl5">
-                                            <rect key="frame" x="55" y="31.5" width="33" height="14.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                            <nil key="textColor"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Author Name" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="grv-5U-MNV">
+                                            <rect key="frame" x="84" y="54.5" width="244" height="22.5"/>
+                                            <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="17"/>
+                                            <color key="textColor" red="0.23648911872793976" green="0.83955319192640121" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="photo" catalog="system" id="7YR-2S-zhQ">
-                                            <rect key="frame" x="16" y="18.5" width="24" height="17.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="arA-Fp-bx6">
+                                            <rect key="frame" x="16" y="2.5" width="60" height="82.5"/>
+                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="85" id="j5U-mL-Tln"/>
+                                                <constraint firstAttribute="width" constant="60" id="ycX-2d-aLb"/>
+                                            </constraints>
                                         </imageView>
                                     </subviews>
+                                    <color key="backgroundColor" red="0.098905794320000004" green="0.097804091869999998" blue="0.1512394547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstItem="ESG-P7-fij" firstAttribute="leading" secondItem="arA-Fp-bx6" secondAttribute="trailing" constant="8" id="Gg4-UQ-Npt"/>
+                                        <constraint firstItem="grv-5U-MNV" firstAttribute="top" secondItem="ESG-P7-fij" secondAttribute="bottom" constant="20" id="O2o-sT-K34"/>
+                                        <constraint firstItem="arA-Fp-bx6" firstAttribute="centerY" secondItem="37f-cq-3Eg" secondAttribute="centerY" id="WNZ-ZF-BiE"/>
+                                        <constraint firstItem="ESG-P7-fij" firstAttribute="trailing" secondItem="37f-cq-3Eg" secondAttribute="trailingMargin" id="ajG-QQ-df2"/>
+                                        <constraint firstItem="grv-5U-MNV" firstAttribute="bottom" secondItem="37f-cq-3Eg" secondAttribute="bottomMargin" id="gac-Wn-19k"/>
+                                        <constraint firstItem="ESG-P7-fij" firstAttribute="top" secondItem="37f-cq-3Eg" secondAttribute="topMargin" id="ixZ-jD-CgX"/>
+                                        <constraint firstItem="grv-5U-MNV" firstAttribute="leading" secondItem="arA-Fp-bx6" secondAttribute="trailing" constant="8" id="qKM-0x-ZK1"/>
+                                        <constraint firstItem="arA-Fp-bx6" firstAttribute="leading" secondItem="37f-cq-3Eg" secondAttribute="leading" constant="16" id="yhd-Dt-hH7"/>
+                                        <constraint firstItem="grv-5U-MNV" firstAttribute="trailing" secondItem="37f-cq-3Eg" secondAttribute="trailingMargin" id="z76-cU-kVl"/>
+                                    </constraints>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
+                                    <outlet property="authorLabel" destination="grv-5U-MNV" id="ia3-bz-G8r"/>
+                                    <outlet property="coverImageView" destination="arA-Fp-bx6" id="bYh-zn-KBr"/>
+                                    <outlet property="titleLabel" destination="ESG-P7-fij" id="nHf-fG-jZs"/>
                                     <segue destination="vC3-pB-5Vb" kind="showDetail" identifier="showDetail" id="6S0-TO-JiA"/>
                                 </connections>
                             </tableViewCell>
@@ -168,7 +191,7 @@
                             <outlet property="delegate" destination="7bK-jq-Zjz" id="RA6-mI-bju"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Master" id="Zdf-7t-Un8">
+                    <navigationItem key="navigationItem" title="Books" id="Zdf-7t-Un8">
                         <barButtonItem key="rightBarButtonItem" title="Add" image="plus" catalog="system" id="7r6-c4-E7s">
                             <connections>
                                 <segue destination="6V5-bj-pyU" kind="presentation" id="nb8-p4-C68"/>
@@ -178,20 +201,20 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rux-fX-hf1" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="709" y="-630"/>
+            <point key="canvasLocation" x="708" y="-630.13493253373315"/>
         </scene>
         <!--Add A Book-->
         <scene sceneID="RVe-aA-N5X">
             <objects>
                 <tableViewController id="jJ6-Mh-rWr" customClass="AddABookViewController" customModule="CSCI321_Assign6" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="8Nv-UF-3Wp">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="591"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
                             <tableViewSection headerTitle="Title" id="e33-hj-jm1">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="CWF-UI-6Jv">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="CWF-UI-6Jv">
                                         <rect key="frame" x="0.0" y="55.5" width="375" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CWF-UI-6Jv" id="4Wr-1B-3Sc">
@@ -200,8 +223,17 @@
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What is the name of the book?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IrS-sq-fK2">
                                                     <rect key="frame" x="16" y="4" width="343" height="36"/>
+                                                    <color key="textColor" red="0.98831683400000003" green="0.88521194459999997" blue="0.1672124565" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                                            <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                                            <color key="value" red="0.098905794320000004" green="0.097804091869999998" blue="0.1512394547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                     <connections>
                                                         <outlet property="delegate" destination="jJ6-Mh-rWr" id="ZYS-zM-HJn"/>
                                                     </connections>
@@ -214,12 +246,13 @@
                                                 <constraint firstAttribute="bottom" secondItem="IrS-sq-fK2" secondAttribute="bottom" constant="4" id="wma-Tu-g0E"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.12943622469999999" green="0.12841749190000001" blue="0.18010392789999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
                             <tableViewSection headerTitle="Author" id="BzE-4N-toN">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="tcd-dl-VCH">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="tcd-dl-VCH">
                                         <rect key="frame" x="0.0" y="155" width="375" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tcd-dl-VCH" id="wxt-7a-0Up">
@@ -228,8 +261,17 @@
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Who wrote the book?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xmo-Yp-hOv">
                                                     <rect key="frame" x="16" y="4" width="343" height="36"/>
+                                                    <color key="textColor" red="0.98816579579999997" green="0.88175225260000001" blue="0.1686632633" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                                            <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                                            <color key="value" red="0.098905794320000004" green="0.097804091869999998" blue="0.1512394547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                     <connections>
                                                         <outlet property="delegate" destination="jJ6-Mh-rWr" id="cw6-6o-1YM"/>
                                                     </connections>
@@ -242,6 +284,7 @@
                                                 <constraint firstItem="Xmo-Yp-hOv" firstAttribute="top" secondItem="wxt-7a-0Up" secondAttribute="top" constant="4" id="v7c-xq-CdV"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.12943622469999999" green="0.12841749190000001" blue="0.18010392789999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -256,13 +299,23 @@
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What year was the book released?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wUB-L7-ZN5">
                                                     <rect key="frame" x="16" y="4" width="343" height="36"/>
+                                                    <color key="textColor" red="0.98848313089999995" green="0.8886654973" blue="0.17462676760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                                            <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                                            <color key="value" red="0.098905794320000004" green="0.097804091869999998" blue="0.1512394547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                     <connections>
                                                         <outlet property="delegate" destination="jJ6-Mh-rWr" id="bJQ-ZB-RjM"/>
                                                     </connections>
                                                 </textField>
                                             </subviews>
+                                            <color key="backgroundColor" red="0.12943622469999999" green="0.12841749190000001" blue="0.18010392789999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstItem="wUB-L7-ZN5" firstAttribute="leading" secondItem="7Cf-g4-ZDb" secondAttribute="leading" constant="16" id="OAJ-TO-hpg"/>
                                                 <constraint firstItem="wUB-L7-ZN5" firstAttribute="top" secondItem="7Cf-g4-ZDb" secondAttribute="top" constant="4" id="YCH-WT-7RF"/>
@@ -270,6 +323,7 @@
                                                 <constraint firstAttribute="bottom" secondItem="wUB-L7-ZN5" secondAttribute="bottom" constant="4" id="zV5-Sv-bfi"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.12943622469999999" green="0.12841749190000001" blue="0.18010392789999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -284,8 +338,17 @@
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What's the book rating from 0 to 5?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IOm-3K-XAa">
                                                     <rect key="frame" x="16" y="4" width="343" height="36"/>
+                                                    <color key="textColor" red="0.98848313089999995" green="0.8886654973" blue="0.17462676760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                                            <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                                            <color key="value" red="0.098905794320000004" green="0.097804091869999998" blue="0.1512394547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                     <connections>
                                                         <outlet property="delegate" destination="jJ6-Mh-rWr" id="fuk-0t-Krj"/>
                                                     </connections>
@@ -298,6 +361,7 @@
                                                 <constraint firstItem="IOm-3K-XAa" firstAttribute="leading" secondItem="o3R-VB-slS" secondAttribute="leading" constant="16" id="iJ7-3V-IHV"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.12943622469999999" green="0.12841749190000001" blue="0.18010392789999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -312,8 +376,17 @@
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What's the ISBN of the book?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cbo-J8-sBQ">
                                                     <rect key="frame" x="16" y="4" width="343" height="36"/>
+                                                    <color key="textColor" red="0.98848313089999995" green="0.8886654973" blue="0.17462676760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                                            <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                                            <color key="value" red="0.098905794320000004" green="0.097804091869999998" blue="0.1512394547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                     <connections>
                                                         <outlet property="delegate" destination="jJ6-Mh-rWr" id="6O6-kc-dSv"/>
                                                     </connections>
@@ -326,13 +399,35 @@
                                                 <constraint firstItem="Cbo-J8-sBQ" firstAttribute="top" secondItem="jMt-Vs-xFr" secondAttribute="top" constant="4" id="qga-dV-DQv"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.12943622469999999" green="0.12841749190000001" blue="0.18010392789999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Cover Image" id="i4f-BI-AZJ">
+                            <tableViewSection headerTitle="Cover Image" footerTitle="" id="i4f-BI-AZJ">
                                 <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="198" id="iDS-vH-I6V">
+                                        <rect key="frame" x="0.0" y="560.5" width="375" height="198"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iDS-vH-I6V" id="vqt-cP-fMy">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="198"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="3vt-JM-LGF">
+                                                    <rect key="frame" x="8" y="5" width="359" height="187.5"/>
+                                                    <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="3vt-JM-LGF" firstAttribute="top" secondItem="vqt-cP-fMy" secondAttribute="top" constant="4" id="61c-ZL-IbH"/>
+                                                <constraint firstAttribute="bottom" secondItem="3vt-JM-LGF" secondAttribute="bottom" constant="4" id="Dc3-by-ZFZ"/>
+                                                <constraint firstAttribute="trailing" secondItem="3vt-JM-LGF" secondAttribute="trailing" constant="8" id="GNF-iV-UGV"/>
+                                                <constraint firstItem="3vt-JM-LGF" firstAttribute="leading" secondItem="vqt-cP-fMy" secondAttribute="leading" constant="8" id="Kvf-Af-5eS"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.098905794320000004" green="0.097804091869999998" blue="0.1512394547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="X5y-Ly-utO">
-                                        <rect key="frame" x="0.0" y="553" width="375" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="758.5" width="375" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="X5y-Ly-utO" id="mep-au-avY">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -340,11 +435,8 @@
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UsU-Fh-VcM">
                                                     <rect key="frame" x="16" y="4" width="343" height="36"/>
-                                                    <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <state key="normal" title="Pick Book Cover Image">
-                                                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                        <color key="titleShadowColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </state>
+                                                    <color key="backgroundColor" red="0.098905794320000004" green="0.097804091869999998" blue="0.1512394547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <state key="normal" title="Pick Book Cover Image"/>
                                                     <connections>
                                                         <action selector="pickBookCoverButtonClicked:" destination="jJ6-Mh-rWr" eventType="touchUpInside" id="prX-sf-J0E"/>
                                                     </connections>
@@ -357,6 +449,7 @@
                                                 <constraint firstAttribute="trailing" secondItem="UsU-Fh-VcM" secondAttribute="trailing" constant="16" id="dqC-dB-I8E"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.098905794320000004" green="0.097804091869999998" blue="0.1512394547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -381,6 +474,7 @@
                     <connections>
                         <outlet property="authorTextField" destination="Xmo-Yp-hOv" id="KEL-ph-6OU"/>
                         <outlet property="isbnTextField" destination="Cbo-J8-sBQ" id="4zh-On-aFO"/>
+                        <outlet property="pickedImageView" destination="3vt-JM-LGF" id="Rev-gZ-ame"/>
                         <outlet property="ratingTextField" destination="IOm-3K-XAa" id="LtG-Ii-pQ9"/>
                         <outlet property="releaseYearTextField" destination="wUB-L7-ZN5" id="SWy-wF-qMR"/>
                         <outlet property="titleTextField" destination="IrS-sq-fK2" id="3AB-tl-myI"/>
@@ -395,9 +489,13 @@
         <scene sceneID="r7l-gg-dq7">
             <objects>
                 <navigationController id="vC3-pB-5Vb" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="DjV-YW-jjY">
+                    <navigationBar key="navigationBar" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" barStyle="black" translucent="NO" id="DjV-YW-jjY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.098905794320000004" green="0.097804091869999998" blue="0.1512394547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.66570854189999995" green="0.89085364339999995" blue="0.12421221289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="JEX-9P-axG" kind="relationship" relationship="rootViewController" id="GKi-kA-LjT"/>
@@ -412,9 +510,13 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6V5-bj-pyU" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zhc-My-mvu">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="zhc-My-mvu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.098905794320000004" green="0.097804091869999998" blue="0.1512394547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.66570854189999995" green="0.89085364339999995" blue="0.12421221289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

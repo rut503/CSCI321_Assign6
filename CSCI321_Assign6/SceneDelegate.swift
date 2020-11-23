@@ -2,8 +2,8 @@
 //  SceneDelegate.swift
 //  CSCI321_Assign6
 //
-//  Created by Rutvik Patel on 11/20/20.
-//  Copyright © 2020 Rut Codes. All rights reserved.
+//  Created by Rutvik Patel (Z1865128).
+//  Created by Aviraj Parmar (Z1861160).
 //
 
 import UIKit
@@ -11,7 +11,6 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate, UISplitViewControllerDelegate {
 
     var window: UIWindow?
-
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.

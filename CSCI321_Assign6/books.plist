@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Book Title</key>
+		<string>Harry Potter and the Sorcerers Stone</string>
+		<key>Release Year</key>
+		<integer>1997</integer>
+		<key>Rating</key>
+		<real>4.8</real>
+		<key>ISBN</key>
+		<integer>9781408855898</integer>
+		<key>Cover Image Name</key>
+		<string>HarryPotterAndTheSorcerersStone.jpg</string>
+		<key>Author Name</key>
+		<string>J. K. Rowling</string>
+	</dict>
+    <dict>
+        <key>Book Title</key>
+        <string>Harry Potter and the Chamber of Secrets</string>
+        <key>Release Year</key>
+        <integer>1998</integer>
+        <key>Rating</key>
+        <real>4.9</real>
+        <key>ISBN</key>
+        <integer>9780439064866</integer>
+        <key>Cover Image Name</key>
+        <string>HarryPotterAndTheChamberOfSecrets.jpg</string>
+        <key>Author Name</key>
+        <string>J. K. Rowling</string>
+    </dict>
+    <dict>
+        <key>Book Title</key>
+        <string>Harry Potter and the Prisoner of Azkaban</string>
+        <key>Release Year</key>
+        <integer>1999</integer>
+        <key>Rating</key>
+        <real>4.6</real>
+        <key>ISBN</key>
+        <integer>9780747549505</integer>
+        <key>Cover Image Name</key>
+        <string>HarryPotterAndThePrisonerOfAzkaban.jpg</string>
+        <key>Author Name</key>
+        <string>J. K. Rowling</string>
+    </dict>
+    <dict>
+        <key>Book Title</key>
+        <string>Harry Potter and the Goblet of Fire</string>
+        <key>Release Year</key>
+        <integer>2000</integer>
+        <key>Rating</key>
+        <real>4.9</real>
+        <key>ISBN</key>
+        <integer>9781408865422</integer>
+        <key>Cover Image Name</key>
+        <string>HarryPotterAndTheGobletOfFire.jpg</string>
+        <key>Author Name</key>
+        <string>J. K. Rowling</string>
+    </dict>
+    <dict>
+        <key>Book Title</key>
+        <string>Harry Potter and the Order of the Phoenix</string>
+        <key>Release Year</key>
+        <integer>2003</integer>
+        <key>Rating</key>
+        <real>4.8</real>
+        <key>ISBN</key>
+        <integer>9781408855935</integer>
+        <key>Cover Image Name</key>
+        <string>HarryPotterAndTheOrderOfThePhoenix.jpg</string>
+        <key>Author Name</key>
+        <string>J. K. Rowling</string>
+    </dict>
+    <dict>
+        <key>Book Title</key>
+        <string>Harry Potter and the Half-Blood Prince</string>
+        <key>Release Year</key>
+        <integer>2005</integer>
+        <key>Rating</key>
+        <real>4.9</real>
+        <key>ISBN</key>
+        <integer>9780439784542</integer>
+        <key>Cover Image Name</key>
+        <string>HarryPotterAndTheHalf-BloodPrince.jpg</string>
+        <key>Author Name</key>
+        <string>J. K. Rowling</string>
+    </dict>
+    <dict>
+        <key>Book Title</key>
+        <string>Harry Potter and the Deathly Hallows</string>
+        <key>Release Year</key>
+        <integer>2007</integer>
+        <key>Rating</key>
+        <real>4.9</real>
+        <key>ISBN</key>
+        <integer>9781408855713</integer>
+        <key>Cover Image Name</key>
+        <string>HarryPotterAndTheDeathlyHallows.jpg</string>
+        <key>Author Name</key>
+        <string>J. K. Rowling</string>
+    </dict>
+    <dict>
+        <key>Book Title</key>
+        <string>Harry Potter and the Cursed Child</string>
+        <key>Release Year</key>
+        <integer>2016</integer>
+        <key>Rating</key>
+        <real>4.1</real>
+        <key>ISBN</key>
+        <integer>9781338216677</integer>
+        <key>Cover Image Name</key>
+        <string>HarryPotterAndTheCursedChild.jpg</string>
+        <key>Author Name</key>
+        <string>J. K. Rowling</string>
+    </dict>
+</array>
+</plist>

@@ -6,6 +6,10 @@
 //  Copyright © 2020 Rut Codes. All rights reserved.
 //
 
+// For EC:
+//     Display books written by a specific author
+//     Allow user to modify the book info
+
 import UIKit
 import CoreData
 
@@ -14,17 +18,59 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     var detailViewController: DetailViewController? = nil
     var managedObjectContext: NSManagedObjectContext? = nil
 
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        // adding edit button on the left side of the navbar
         navigationItem.leftBarButtonItem = editButtonItem
-
-        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(insertNewObject(_:)))
-        navigationItem.rightBarButtonItem = addButton
+        // split view boiler plate code
         if let split = splitViewController {
             let controllers = split.viewControllers
             detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
+        }
+        
+        // Insert data into the database from the plist file and load into table view
+        insertDataIntoDatabaseFromFile()
+    }
+    
+    func insertDataIntoDatabaseFromFile() {
+        // checking if books.plist data is already in Core Data
+        let fetch = NSFetchRequest<Book>(entityName: "Book")
+        let count = try! managedObjectContext!.count(for: fetch)
+        
+        if count > 0 {
+            return // books.plist data is already in the Core Data
+        }
+        
+        guard let url = Bundle.main.url(forResource: "books", withExtension: ".plist"), let data: Data = try? Data(contentsOf: url) else {
+            print("Unable to read property list")
+            return
+        }
+        
+        do {
+            let decoder = PropertyListDecoder()
+            let array = try decoder.decode([BookData].self, from: data)
+            
+            for b in array {
+                let entity = NSEntityDescription.entity(forEntityName: "Book", in: managedObjectContext!)!
+                let newBook = Book(entity: entity, insertInto: managedObjectContext)
+                
+                newBook.title = b.title
+                newBook.author = b.author
+                newBook.releaseYear = b.releaseYear
+                newBook.rating = b.rating
+                newBook.isbn = b.isbn
+                
+                let image = UIImage(named: b.coverImageName)
+                let coverImageData = image!.jpegData(compressionQuality: 1.0)!
+                newBook.coverImage = NSData(data: coverImageData) as Data
+                
+                // Save the context.
+                try managedObjectContext!.save()
+            }
+
+        } catch {
+            print("Unable to save book data to database: \(error.localizedDescription)")
         }
     }
 
@@ -32,26 +78,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         clearsSelectionOnViewWillAppear = splitViewController!.isCollapsed
         super.viewWillAppear(animated)
     }
-
-    @objc
-    func insertNewObject(_ sender: Any) {
-        let context = self.fetchedResultsController.managedObjectContext
-        let newEvent = Event(context: context)
-             
-        // If appropriate, configure the new managed object.
-        newEvent.timestamp = Date()
-
-        // Save the context.
-        do {
-            try context.save()
-        } catch {
-            // Replace this implementation with code to handle the error appropriately.
-            // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-            let nserror = error as NSError
-            fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
-        }
-    }
-
+    
     // MARK: - Segues
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -63,6 +90,43 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
                 controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
                 controller.navigationItem.leftItemsSupplementBackButton = true
                 detailViewController = controller
+            }
+        }
+    }
+    
+    @IBAction func unwindToCancel(_ segue: UIStoryboardSegue){
+        
+    }
+    
+    @IBAction func unwindToSave(_ segue: UIStoryboardSegue){
+        if let addABookViewController = segue.source as? AddABookViewController {
+            if let addBook = addABookViewController.bookData {
+                
+                let context = self.fetchedResultsController.managedObjectContext
+                let newBook = Book(context: context)
+                
+                newBook.title = addBook.title
+                newBook.author = addBook.author
+                newBook.releaseYear = addBook.releaseYear
+                newBook.rating = addBook.rating
+                newBook.isbn = addBook.isbn
+                
+                if let coverImageData = addABookViewController.coverImageData {
+                    newBook.coverImage = NSData(data: coverImageData) as Data
+                } else {
+                    let image = UIImage(named: "DefaultBookCover")
+                    let coverImageData = image!.jpegData(compressionQuality: 1.0)!
+                    newBook.coverImage = NSData(data: coverImageData) as Data
+                }
+                
+                // Save the context.
+                do {
+                    try context.save()
+                } catch let error as NSError {
+                    print("Unable to save new book: \(error), \(error.userInfo)")
+                }
+                
+                self.tableView.reloadData()
             }
         }
     }
@@ -80,8 +144,8 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        let event = fetchedResultsController.object(at: indexPath)
-        configureCell(cell, withEvent: event)
+        let book = fetchedResultsController.object(at: indexPath)
+        configureCell(cell, withEvent: book)
         return cell
     }
 
@@ -97,34 +161,32 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
                 
             do {
                 try context.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nserror = error as NSError
-                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+            } catch let error as NSError{
+                print("Unable to delete a row from a table: \(error), \(error.userInfo)")
             }
         }
     }
 
-    func configureCell(_ cell: UITableViewCell, withEvent event: Event) {
-        cell.textLabel!.text = event.timestamp!.description
+    func configureCell(_ cell: UITableViewCell, withEvent book: Book) {
+        cell.textLabel!.text = book.title
+        cell.detailTextLabel!.text = "- " + book.author!
+        cell.imageView!.image = UIImage(data: book.coverImage!)
     }
 
     // MARK: - Fetched results controller
 
-    var fetchedResultsController: NSFetchedResultsController<Event> {
+    var fetchedResultsController: NSFetchedResultsController<Book> {
         if _fetchedResultsController != nil {
             return _fetchedResultsController!
         }
         
-        let fetchRequest: NSFetchRequest<Event> = Event.fetchRequest()
+        let fetchRequest: NSFetchRequest<Book> = Book.fetchRequest()
         
         // Set the batch size to a suitable number.
         fetchRequest.fetchBatchSize = 20
         
         // Edit the sort key as appropriate.
-        let sortDescriptor = NSSortDescriptor(key: "timestamp", ascending: false)
-        
+        let sortDescriptor = NSSortDescriptor(key: "title", ascending: false)
         fetchRequest.sortDescriptors = [sortDescriptor]
         
         // Edit the section name key path and cache name if appropriate.
@@ -135,16 +197,13 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         
         do {
             try _fetchedResultsController!.performFetch()
-        } catch {
-             // Replace this implementation with code to handle the error appropriately.
-             // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. 
-             let nserror = error as NSError
-             fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+        } catch let error as NSError {
+             print("Unresolved error \(error), \(error.userInfo)")
         }
         
         return _fetchedResultsController!
     }    
-    var _fetchedResultsController: NSFetchedResultsController<Event>? = nil
+    var _fetchedResultsController: NSFetchedResultsController<Book>? = nil
 
     func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         tableView.beginUpdates()
@@ -168,9 +227,9 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
             case .delete:
                 tableView.deleteRows(at: [indexPath!], with: .fade)
             case .update:
-                configureCell(tableView.cellForRow(at: indexPath!)!, withEvent: anObject as! Event)
+                configureCell(tableView.cellForRow(at: indexPath!)!, withEvent: anObject as! Book)
             case .move:
-                configureCell(tableView.cellForRow(at: indexPath!)!, withEvent: anObject as! Event)
+                configureCell(tableView.cellForRow(at: indexPath!)!, withEvent: anObject as! Book)
                 tableView.moveRow(at: indexPath!, to: newIndexPath!)
             default:
                 return

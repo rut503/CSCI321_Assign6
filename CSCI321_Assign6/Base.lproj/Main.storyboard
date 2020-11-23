@@ -129,35 +129,53 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="Arm-wq-HPj" detailTextLabel="0IW-ka-fl5" imageView="7YR-2S-zhQ" style="IBUITableViewCellStyleSubtitle" id="WCw-Qf-5nD">
-                                <rect key="frame" x="0.0" y="28" width="375" height="55.5"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="88" id="WCw-Qf-5nD" customClass="BookCell" customModule="CSCI321_Assign6" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="88"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WCw-Qf-5nD" id="37f-cq-3Eg">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="55.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="88"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Arm-wq-HPj">
-                                            <rect key="frame" x="55" y="10" width="33.5" height="20.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title of the Book" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ESG-P7-fij">
+                                            <rect key="frame" x="84" y="11" width="275" height="26"/>
+                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <size key="shadowOffset" width="0.0" height="0.0"/>
                                         </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0IW-ka-fl5">
-                                            <rect key="frame" x="55" y="31.5" width="33" height="14.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Author Name" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="grv-5U-MNV">
+                                            <rect key="frame" x="84" y="54.5" width="275" height="22.5"/>
+                                            <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="photo" catalog="system" id="7YR-2S-zhQ">
-                                            <rect key="frame" x="16" y="18.5" width="24" height="17.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="arA-Fp-bx6">
+                                            <rect key="frame" x="16" y="2.5" width="60" height="82.5"/>
+                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="85" id="j5U-mL-Tln"/>
+                                                <constraint firstAttribute="width" constant="60" id="ycX-2d-aLb"/>
+                                            </constraints>
                                         </imageView>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="grv-5U-MNV" firstAttribute="top" secondItem="ESG-P7-fij" secondAttribute="bottom" constant="17.5" id="7Kc-SG-nnk"/>
+                                        <constraint firstItem="ESG-P7-fij" firstAttribute="leading" secondItem="arA-Fp-bx6" secondAttribute="trailing" constant="8" id="Gg4-UQ-Npt"/>
+                                        <constraint firstItem="arA-Fp-bx6" firstAttribute="centerY" secondItem="37f-cq-3Eg" secondAttribute="centerY" id="WNZ-ZF-BiE"/>
+                                        <constraint firstItem="ESG-P7-fij" firstAttribute="trailing" secondItem="37f-cq-3Eg" secondAttribute="trailingMargin" id="ajG-QQ-df2"/>
+                                        <constraint firstItem="grv-5U-MNV" firstAttribute="bottom" secondItem="37f-cq-3Eg" secondAttribute="bottomMargin" id="gac-Wn-19k"/>
+                                        <constraint firstItem="ESG-P7-fij" firstAttribute="top" secondItem="37f-cq-3Eg" secondAttribute="topMargin" id="ixZ-jD-CgX"/>
+                                        <constraint firstItem="grv-5U-MNV" firstAttribute="leading" secondItem="arA-Fp-bx6" secondAttribute="trailing" constant="8" id="qKM-0x-ZK1"/>
+                                        <constraint firstItem="arA-Fp-bx6" firstAttribute="leading" secondItem="37f-cq-3Eg" secondAttribute="leading" constant="16" id="yhd-Dt-hH7"/>
+                                        <constraint firstItem="grv-5U-MNV" firstAttribute="trailing" secondItem="37f-cq-3Eg" secondAttribute="trailingMargin" id="z76-cU-kVl"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
+                                    <outlet property="authorLabel" destination="grv-5U-MNV" id="ia3-bz-G8r"/>
+                                    <outlet property="coverImageView" destination="arA-Fp-bx6" id="bYh-zn-KBr"/>
+                                    <outlet property="titleLabel" destination="ESG-P7-fij" id="nHf-fG-jZs"/>
                                     <segue destination="vC3-pB-5Vb" kind="showDetail" identifier="showDetail" id="6S0-TO-JiA"/>
                                 </connections>
                             </tableViewCell>
@@ -178,7 +196,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rux-fX-hf1" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="709" y="-630"/>
+            <point key="canvasLocation" x="708" y="-630.13493253373315"/>
         </scene>
         <!--Add A Book-->
         <scene sceneID="RVe-aA-N5X">

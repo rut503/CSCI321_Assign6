@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DF654576256B199A00F09939 /* BookData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF654575256B199A00F09939 /* BookData.swift */; };
+		DF65457C256B59D100F09939 /* BookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF65457B256B59D100F09939 /* BookCell.swift */; };
 		DF8F7816256863D600695823 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8F7815256863D600695823 /* AppDelegate.swift */; };
 		DF8F7819256863D600695823 /* CSCI321_Assign6.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DF8F7817256863D600695823 /* CSCI321_Assign6.xcdatamodeld */; };
 		DF8F781B256863D600695823 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8F781A256863D600695823 /* SceneDelegate.swift */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		DF654575256B199A00F09939 /* BookData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookData.swift; sourceTree = "<group>"; };
+		DF65457B256B59D100F09939 /* BookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCell.swift; sourceTree = "<group>"; };
 		DF8F7812256863D600695823 /* CSCI321_Assign6.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CSCI321_Assign6.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF8F7815256863D600695823 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DF8F7818256863D600695823 /* CSCI321_Assign6.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CSCI321_Assign6.xcdatamodel; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 				DF8F7815256863D600695823 /* AppDelegate.swift */,
 				DF8F781A256863D600695823 /* SceneDelegate.swift */,
 				DF8F781C256863D600695823 /* MasterViewController.swift */,
+				DF65457B256B59D100F09939 /* BookCell.swift */,
 				DF97C172256A368300017CFA /* AddABookViewController.swift */,
 				DF8F781E256863D600695823 /* DetailViewController.swift */,
 				DF8F7820256863D600695823 /* Main.storyboard */,
@@ -162,6 +165,7 @@
 			files = (
 				DF8F781D256863D600695823 /* MasterViewController.swift in Sources */,
 				DF8F7819256863D600695823 /* CSCI321_Assign6.xcdatamodeld in Sources */,
+				DF65457C256B59D100F09939 /* BookCell.swift in Sources */,
 				DF8F781F256863D600695823 /* DetailViewController.swift in Sources */,
 				DF97C173256A368300017CFA /* AddABookViewController.swift in Sources */,
 				DF8F7816256863D600695823 /* AppDelegate.swift in Sources */,

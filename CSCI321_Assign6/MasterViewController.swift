@@ -143,10 +143,41 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! BookCell
+        
         let book = fetchedResultsController.object(at: indexPath)
-        configureCell(cell, withEvent: book)
+        
+//        configureCell(cell, withEvent: book)
+
+        cell.coverImageView.image = UIImage(data: book.coverImage!)
+        cell.titleLabel!.text = book.title
+        cell.authorLabel!.text = "- " + book.author!
+        // contents to show on table cell: image view, name, political party
+//        imageStore.downloadImage(with: object.imageUrlString, completion: {
+//            (image: UIImage?) in
+//            cell.characterImageView.image = image
+//        })
+//        cell.nameLabel!.text = object.name                        //name label object
+//        cell.partyLabel!.text = object.politicalParty             //political party label object
         return cell
+        
+        
+        
+        
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+//        let book = fetchedResultsController.object(at: indexPath)
+//        configureCell(cell, withEvent: book)
+//        return cell
+    }
+    
+    func configureCell(_ cell: UITableViewCell, withEvent book: Book) {
+//        cell.coverImageView.image = UIImage(data: book.coverImage!)
+//        cell.titleLabel!.text = book.title
+//        cell.authorLabel!.text = "- " + book.author!
+        
+//        cell.textLabel!.text = book.title
+//        cell.detailTextLabel!.text = "- " + book.author!
+//        cell.imageView!.image = UIImage(data: book.coverImage!)
     }
 
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -165,12 +196,6 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
                 print("Unable to delete a row from a table: \(error), \(error.userInfo)")
             }
         }
-    }
-
-    func configureCell(_ cell: UITableViewCell, withEvent book: Book) {
-        cell.textLabel!.text = book.title
-        cell.detailTextLabel!.text = "- " + book.author!
-        cell.imageView!.image = UIImage(data: book.coverImage!)
     }
 
     // MARK: - Fetched results controller

@@ -147,37 +147,18 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         
         let book = fetchedResultsController.object(at: indexPath)
         
-//        configureCell(cell, withEvent: book)
+        // setting background color of each cell
+        let colorView = UIView()
+        colorView.backgroundColor = UIColor(red: CGFloat(25.0/255.0), green: CGFloat(25.0/255.0), blue: CGFloat(39.0/255.0), alpha: CGFloat(1.0))
+        cell.backgroundView = colorView
+        // setting ___ under each cell
+        
 
         cell.coverImageView.image = UIImage(data: book.coverImage!)
         cell.titleLabel!.text = book.title
         cell.authorLabel!.text = "- " + book.author!
-        // contents to show on table cell: image view, name, political party
-//        imageStore.downloadImage(with: object.imageUrlString, completion: {
-//            (image: UIImage?) in
-//            cell.characterImageView.image = image
-//        })
-//        cell.nameLabel!.text = object.name                        //name label object
-//        cell.partyLabel!.text = object.politicalParty             //political party label object
+
         return cell
-        
-        
-        
-        
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-//        let book = fetchedResultsController.object(at: indexPath)
-//        configureCell(cell, withEvent: book)
-//        return cell
-    }
-    
-    func configureCell(_ cell: UITableViewCell, withEvent book: Book) {
-//        cell.coverImageView.image = UIImage(data: book.coverImage!)
-//        cell.titleLabel!.text = book.title
-//        cell.authorLabel!.text = "- " + book.author!
-        
-//        cell.textLabel!.text = book.title
-//        cell.detailTextLabel!.text = "- " + book.author!
-//        cell.imageView!.image = UIImage(data: book.coverImage!)
     }
 
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -259,6 +240,16 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
             default:
                 return
         }
+    }
+    
+    func configureCell(_ cell: UITableViewCell, withEvent book: Book) {
+//        cell.coverImageView.image = UIImage(data: book.coverImage!)
+//        cell.titleLabel!.text = book.title
+//        cell.authorLabel!.text = "- " + book.author!
+        
+//        cell.textLabel!.text = book.title
+//        cell.detailTextLabel!.text = "- " + book.author!
+//        cell.imageView!.image = UIImage(data: book.coverImage!)
     }
 
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {

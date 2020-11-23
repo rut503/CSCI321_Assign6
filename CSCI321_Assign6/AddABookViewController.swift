@@ -33,6 +33,8 @@ class AddABookViewController: UITableViewController, UITextFieldDelegate, UINavi
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
         imagePicker.delegate = self
+        
+        self.tableView.backgroundColor = UIColor(red: CGFloat(33.0/255.0), green: CGFloat(33.0/255.0), blue: CGFloat(46.0/255.0), alpha: CGFloat(1.0))
     }
     
     @IBAction func pickBookCoverButtonClicked(_ sender: Any) {
@@ -122,6 +124,15 @@ class AddABookViewController: UITableViewController, UITextFieldDelegate, UINavi
                 bookData = BookData(title: title, author: author, rating: rating, isbn: isbn, releaseYear: releaseYear, coverImageName: "")
             }
         }
+    }
+    
+    // MARK: - Customizing Table View to fit Dark Mode
+    
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+
+        // For Header Text Color
+        let header = view as! UITableViewHeaderFooterView
+        header.textLabel?.textColor = UIColor(red: CGFloat(248.0/255.0), green: CGFloat(79.0/255.0), blue: CGFloat(4.0/255.0), alpha: CGFloat(1.0))
     }
 
 }

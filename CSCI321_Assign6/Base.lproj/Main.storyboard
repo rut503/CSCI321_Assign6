@@ -198,7 +198,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What is the name of the book?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IrS-sq-fK2">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="What is the name of the book?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IrS-sq-fK2">
                                                     <rect key="frame" x="16" y="4" width="343" height="36"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -226,7 +226,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Who wrote the book?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xmo-Yp-hOv">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Who wrote the book?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xmo-Yp-hOv">
                                                     <rect key="frame" x="16" y="4" width="343" height="36"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -254,7 +254,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What year was the book released?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wUB-L7-ZN5">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="What year was the book released?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wUB-L7-ZN5">
                                                     <rect key="frame" x="16" y="4" width="343" height="36"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -282,7 +282,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What's the book rating from 0 to 5?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IOm-3K-XAa">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="What's the book rating from 0 to 5?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IOm-3K-XAa">
                                                     <rect key="frame" x="16" y="4" width="343" height="36"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
@@ -310,7 +310,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What's the ISBN of the book?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cbo-J8-sBQ">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="What's the ISBN of the book?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cbo-J8-sBQ">
                                                     <rect key="frame" x="16" y="4" width="343" height="36"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -329,10 +329,10 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Cover Image" id="i4f-BI-AZJ">
+                            <tableViewSection headerTitle="Cover Image" footerTitle="" id="i4f-BI-AZJ">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="X5y-Ly-utO">
-                                        <rect key="frame" x="0.0" y="553" width="375" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="560.5" width="375" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="X5y-Ly-utO" id="mep-au-avY">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -355,6 +355,26 @@
                                                 <constraint firstAttribute="bottom" secondItem="UsU-Fh-VcM" secondAttribute="bottom" constant="4" id="MQv-QE-BGS"/>
                                                 <constraint firstItem="UsU-Fh-VcM" firstAttribute="leading" secondItem="mep-au-avY" secondAttribute="leading" constant="16" id="UZ1-Ww-GKe"/>
                                                 <constraint firstAttribute="trailing" secondItem="UsU-Fh-VcM" secondAttribute="trailing" constant="16" id="dqC-dB-I8E"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="337" id="iDS-vH-I6V">
+                                        <rect key="frame" x="0.0" y="604" width="375" height="337"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iDS-vH-I6V" id="vqt-cP-fMy">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="337"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="3vt-JM-LGF">
+                                                    <rect key="frame" x="8" y="5" width="359" height="326.5"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="3vt-JM-LGF" firstAttribute="top" secondItem="vqt-cP-fMy" secondAttribute="top" constant="4" id="61c-ZL-IbH"/>
+                                                <constraint firstAttribute="bottom" secondItem="3vt-JM-LGF" secondAttribute="bottom" constant="4" id="Dc3-by-ZFZ"/>
+                                                <constraint firstAttribute="trailing" secondItem="3vt-JM-LGF" secondAttribute="trailing" constant="8" id="GNF-iV-UGV"/>
+                                                <constraint firstItem="3vt-JM-LGF" firstAttribute="leading" secondItem="vqt-cP-fMy" secondAttribute="leading" constant="8" id="Kvf-Af-5eS"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -381,6 +401,7 @@
                     <connections>
                         <outlet property="authorTextField" destination="Xmo-Yp-hOv" id="KEL-ph-6OU"/>
                         <outlet property="isbnTextField" destination="Cbo-J8-sBQ" id="4zh-On-aFO"/>
+                        <outlet property="pickedImageView" destination="3vt-JM-LGF" id="Rev-gZ-ame"/>
                         <outlet property="ratingTextField" destination="IOm-3K-XAa" id="LtG-Ii-pQ9"/>
                         <outlet property="releaseYearTextField" destination="wUB-L7-ZN5" id="SWy-wF-qMR"/>
                         <outlet property="titleTextField" destination="IrS-sq-fK2" id="3AB-tl-myI"/>

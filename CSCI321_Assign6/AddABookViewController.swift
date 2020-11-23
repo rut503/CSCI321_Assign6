@@ -13,6 +13,8 @@ class AddABookViewController: UITableViewController, UITextFieldDelegate, UINavi
     var bookData: BookData?
     var coverImageData: Data?
     
+    @IBOutlet weak var pickedImageView: UIImageView!
+    
     var imagePicker = UIImagePickerController()
 
     @IBOutlet weak var titleTextField: UITextField!
@@ -35,7 +37,7 @@ class AddABookViewController: UITableViewController, UITextFieldDelegate, UINavi
     
     @IBAction func pickBookCoverButtonClicked(_ sender: Any) {
         imagePicker.sourceType = .photoLibrary
-        imagePicker.allowsEditing = true
+        imagePicker.allowsEditing = false
         present(imagePicker, animated: true, completion: nil)
     }
     
@@ -50,6 +52,9 @@ class AddABookViewController: UITableViewController, UITextFieldDelegate, UINavi
         } else {
             return
         }
+        
+        // showing user picked image
+        pickedImageView.image = newImage
 
         // passing image data back to the master detail view
         let imageData = newImage.jpegData(compressionQuality: 1.0)!

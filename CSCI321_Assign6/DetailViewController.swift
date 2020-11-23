@@ -9,15 +9,34 @@
 import UIKit
 
 class DetailViewController: UIViewController {
-
-    @IBOutlet weak var detailDescriptionLabel: UILabel!
-
+    
+    @IBOutlet weak var coverImageView: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var authorLabel: UILabel!
+    @IBOutlet weak var ratingLabel: UILabel!
+    @IBOutlet weak var isbnLabel: UILabel!
+    @IBOutlet weak var releaseYearLabel: UILabel!
 
     func configureView() {
         // Update the user interface for the detail item.
         if let detail = detailItem {
-            if let label = detailDescriptionLabel {
-                label.text = detail.timestamp!.description
+            if let title = titleLabel {
+                title.text = detail.title
+            }
+            if let author = authorLabel {
+                author.text = "- " + detail.author!
+            }
+            if let rating = ratingLabel {
+                rating.text = "Rating: \(detail.rating)/5.0"
+            }
+            if let isbn = isbnLabel {
+                isbn.text = "ISBN: \(detail.isbn)"
+            }
+            if let releaseYear = releaseYearLabel {
+                releaseYear.text = "Release Year: \(detail.releaseYear)"
+            }
+            if let coverImage = coverImageView {
+                coverImage.image = UIImage(data: detail.coverImage!)
             }
         }
     }
@@ -28,13 +47,10 @@ class DetailViewController: UIViewController {
         configureView()
     }
 
-    var detailItem: Event? {
+    var detailItem: Book? {
         didSet {
             // Update the view.
             configureView()
         }
     }
-
-
 }
-
